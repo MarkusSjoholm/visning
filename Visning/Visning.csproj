@@ -40,6 +40,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EmptyClass.cs" />
+    <Compile Include="ResidenceFactory.cs" />
+    <Compile Include="Residence.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

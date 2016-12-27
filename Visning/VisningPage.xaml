@@ -1,12 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Visning" x:Class="Visning.VisningPage">
-	<Label Text="Welcome to Xamarin Forms..!" VerticalOptions="Center" HorizontalOptions="Center" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Visning"
+		x:Class="Visning.VisningPage"
+		Title="Startsida"
+		BindingContext="{x:Static local:ResidenceFactory.Residences}"
+		>
+	<StackLayout Padding="20" Spacing="10">
+		<Label Text="Känn av objekt i närheten. (GPS?) / Slå på Bluetooth"></Label>
+		<!-- <Button Text="Sök objekt" Clicked="BtnSearchClicked"></Button> -->
+
+		<Button Text="Sök objekt" x:Name="BtnSearch"></Button>
+
+		<Label IsVisible="false" Text="Funna objekt"></Label>
+
+		<Label x:Name="lblFoundObjects" Text="Welcome to Xamarin Forms..!" VerticalOptions="Center" HorizontalOptions="Center" />
+
+		<!-- <ListView x:Name="residenceList" ItemsSource="{x:Static local:ResidenceFactory.Residences}"></ListView> -->
+		<ListView x:Name="residenceList" ItemsSource="{Binding .}"></ListView>
+	</StackLayout>
 
 
-
-
-
-	
-
-	
 </ContentPage>
